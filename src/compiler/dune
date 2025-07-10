@@ -1,0 +1,24 @@
+(library
+
+  ; Gives the name of this library.
+  (name hatchCompiler)
+
+  ; Gives the names of the libraries that this library depends upon.
+  (libraries
+    hatchLanguage
+    batteries
+  )
+
+  ; Sets flags to be passed to the OCaml compiler.
+  (flags
+    (:standard -w -33-39 -warn-error -8)
+  )
+
+  ; Preprocessing steps to take before compiling the OCaml source code.  This is
+  ; useful to avoid writing tedious boilerplate code.
+  (preprocess
+    (pps
+      ppx_deriving.std
+    )
+  )
+)

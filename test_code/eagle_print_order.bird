@@ -1,0 +1,2 @@
+let t = (print(1), print(false)) in
+t[0]

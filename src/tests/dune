@@ -1,0 +1,24 @@
+(rule
+  (alias runtest)
+  (deps tests.bc (glob_files ../test_code/*))
+  (action (chdir ../.. (run src/tests/tests.bc)))
+)
+
+(executable
+  (name tests)
+  (libraries
+    batteries
+    hatchCompiler
+    hatchLanguage
+    oUnit
+  )
+  (flags
+    (:standard -w -33-39)
+  )
+  (preprocess
+    (pps
+      ppx_deriving.std
+    )
+  )
+  (modes byte)
+)

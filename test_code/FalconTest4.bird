@@ -1,0 +1,6 @@
+def f x y =
+  x + y
+end
+
+let g = f in
+g 2 4

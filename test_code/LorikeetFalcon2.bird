@@ -1,0 +1,41 @@
+def fauxbinacci_1 n =
+  if n = 0 then 0 else
+  if n = 1 then 1 else
+  if n = 2 then 1 else
+  fauxbinacci_1 (n-1) + fauxbinacci_1 (n-2)
+end
+
+def fauxbinacci_2 n =
+  if n = 0 then 0 else
+  if n = 1 then 1 else
+  if n = 2 then 2 else
+  fauxbinacci_2 (n-1) + fauxbinacci_2 (n-2)
+end
+
+def fauxbinacci_3 n =
+  if n = 0 then 0 else
+  if n = 1 then 1 else
+  if n = 2 then 3 else
+  fauxbinacci_3 (n-1) + fauxbinacci_3 (n-2)
+end
+
+def fauxbinacci_4 n =
+  if n = 0 then 0 else
+  if n = 1 then 1 else
+  if n = 2 then 4 else
+  fauxbinacci_4 (n-1) + fauxbinacci_4 (n-2)
+end
+
+def run_task func arg parent =
+  let result = func arg in
+  send(parent, result)
+end
+
+let child_1 = parallel(run_task fauxbinacci_1 32) in
+let child_2 = parallel(run_task fauxbinacci_2 32) in
+let child_3 = parallel(run_task fauxbinacci_3 32) in
+let child_4 = parallel(run_task fauxbinacci_4 32) in
+receive(child_1) +
+receive(child_2) +
+receive(child_3) +
+receive(child_4)

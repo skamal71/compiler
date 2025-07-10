@@ -1,0 +1,13 @@
+default_assignment: null
+valid_assignments:
+    - auklet
+    - bluebird
+    - cardinal
+    - dove
+    - eagle
+    - falcon
+    - finch
+    - gull
+    - hoopoe
+    - lorikeet
+    - pyrrhuloxia

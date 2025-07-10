@@ -1,0 +1,5 @@
+def subtract(x, y)
+    x - y
+end
+
+subtract(10, 3)

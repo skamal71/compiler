@@ -1,0 +1,10 @@
+(executable
+  (name hatch)
+  (libraries
+    batteries
+    hatchCompiler
+    hatchLanguage
+    oUnit
+  )
+  (modes byte)
+)

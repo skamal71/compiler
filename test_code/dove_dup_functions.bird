@@ -1,0 +1,4 @@
+def f() 0 end
+def f(x) x end
+
+f()

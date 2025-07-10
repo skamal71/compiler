@@ -1,0 +1,48 @@
+def link h t =
+  (h,t)
+end
+
+def head lst =
+  lst[0]
+end
+
+def tail lst =
+  lst[1]
+end
+
+def empty _ =
+  false
+end
+
+def is_empty lst =
+  isbool(print(lst))
+end
+
+def length lst =
+  if is_empty lst then
+    0
+  else
+    1 + length (tail lst)
+end
+
+def map f lst =
+  if is_empty lst then
+    lst
+  else
+    link (f (head lst)) (map f (tail lst))
+end
+
+def fold_left f accum lst =
+  if is_empty lst then
+    accum
+  else
+    let new_accum = f accum (head lst) in
+    fold_left f new_accum (tail lst)
+end
+
+def plus x y =
+  x + y
+end
+
+let example = link 1 (link 2 (link 4 (link 8 (link 16 (empty false))))) in
+fold_left plus 0 example

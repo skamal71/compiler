@@ -1,0 +1,32 @@
+def fauxbinacci_1 n =
+  if n = 0 then 0 else
+  if n = 1 then 1 else
+  if n = 2 then 1 else
+  fauxbinacci_1 (n-1) + fauxbinacci_1 (n-2)
+end
+
+def fauxbinacci_2 n =
+  if n = 0 then 0 else
+  if n = 1 then 1 else
+  if n = 2 then 2 else
+  fauxbinacci_2 (n-1) + fauxbinacci_2 (n-2)
+end
+
+def fauxbinacci_3 n =
+  if n = 0 then 0 else
+  if n = 1 then 1 else
+  if n = 2 then 3 else
+  fauxbinacci_3 (n-1) + fauxbinacci_3 (n-2)
+end
+
+def fauxbinacci_4 n =
+  if n = 0 then 0 else
+  if n = 1 then 1 else
+  if n = 2 then 4 else
+  fauxbinacci_4 (n-1) + fauxbinacci_4 (n-2)
+end
+
+fauxbinacci_1 32 +
+fauxbinacci_2 32 +
+fauxbinacci_3 32 +
+fauxbinacci_4 32

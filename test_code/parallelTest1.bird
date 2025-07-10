@@ -1,0 +1,15 @@
+def printloop n k parent =
+  if k = 0 then 0 else
+  let junk = print((n,k)) in
+  let _ = sleep(1) in
+  printloop n (k-1) parent
+end
+   
+def runloop i =
+  if i = 0 then 0 else
+  let junk = parallel(printloop i 4) in
+  runloop (i-1)
+end
+   
+let junk = runloop 4 in
+sleep(4)

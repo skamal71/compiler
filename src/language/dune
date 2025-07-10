@@ -1,0 +1,19 @@
+(ocamllex
+  lexer
+)
+(menhir
+  (modules
+    parser
+  )
+)
+(library
+  (name hatchLanguage)
+  (libraries
+    batteries
+  )
+  (preprocess
+    (pps
+      ppx_deriving.std
+    )
+  )
+)

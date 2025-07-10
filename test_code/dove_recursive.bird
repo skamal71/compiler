@@ -1,0 +1,5 @@
+def summate(x)
+    if x > 1 then x + summate(x - 1) else x
+end
+
+summate(5)

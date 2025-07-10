@@ -1,0 +1,5 @@
+def order(x, y)
+    x - y
+end
+
+order(3, 5)

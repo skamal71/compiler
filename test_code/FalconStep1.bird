@@ -1,0 +1,5 @@
+def f x y z =
+  x + y + z
+end
+
+f

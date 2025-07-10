@@ -1,0 +1,6 @@
+def f x y =
+  x + y
+end
+
+let increment = f 1 in
+(increment 3, increment 7)

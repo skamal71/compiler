@@ -1,0 +1,5 @@
+def f(x1,x2)
+  x1 + x2
+end
+
+f(print(1),print(3))

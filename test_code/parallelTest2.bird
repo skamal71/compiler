@@ -1,0 +1,6 @@
+def echo n parent =
+  let _ = send(parent, n) in 0
+end
+
+let c = parallel(echo 42) in
+print(receive(c))

@@ -1,0 +1,6 @@
+def f a b c=
+  a + b + c
+end
+let partial1 = f 10 in
+let partial2 = partial1 20 in
+partial2
