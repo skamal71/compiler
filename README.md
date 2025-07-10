@@ -240,10 +240,6 @@ The compiler generates optimized x86-64 assembly with:
 4. Ensure all tests pass
 5. Submit a pull request
 
-## 📄 License
-
-This project is part of an academic compiler design course. Please refer to your institution's academic integrity policies.
-
 ## 🙏 Acknowledgments
 
 - **OCaml Community**: For the excellent functional programming language
